@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/jokes_advice_quotes/static/css/main.25816b94.chunk.css",
+    "main.js": "/jokes_advice_quotes/static/js/main.6322ee28.chunk.js",
+    "main.js.map": "/jokes_advice_quotes/static/js/main.6322ee28.chunk.js.map",
+    "runtime-main.js": "/jokes_advice_quotes/static/js/runtime-main.4e2e9354.js",
+    "runtime-main.js.map": "/jokes_advice_quotes/static/js/runtime-main.4e2e9354.js.map",
+    "static/js/2.022d501e.chunk.js": "/jokes_advice_quotes/static/js/2.022d501e.chunk.js",
+    "static/js/2.022d501e.chunk.js.map": "/jokes_advice_quotes/static/js/2.022d501e.chunk.js.map",
+    "index.html": "/jokes_advice_quotes/index.html",
+    "static/css/main.25816b94.chunk.css.map": "/jokes_advice_quotes/static/css/main.25816b94.chunk.css.map",
+    "static/js/2.022d501e.chunk.js.LICENSE.txt": "/jokes_advice_quotes/static/js/2.022d501e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4e2e9354.js",
+    "static/js/2.022d501e.chunk.js",
+    "static/css/main.25816b94.chunk.css",
+    "static/js/main.6322ee28.chunk.js"
+  ]
+}
