@@ -27,3 +27,26 @@ footer {
   text-align: right;
   margin-bottom: 11px;
 }
+
+audio {
+  margin-right: 11px;
+}
+
+footer .left a {
+  position: relative;
+  bottom: 7px;
+}
+
+footer .right a {
+  position: relative;
+  bottom: -14px;
+}
+
+/* Helper Classes */
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
