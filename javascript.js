@@ -1,18 +1,18 @@
 background = {
   canvas: null,
   context: null,
-  time_per_frame: 60, // milliseconds
+  time_per_frame: 1000, // milliseconds
+  num_stars: 72, // num green beings
 };
 
 var star_matrix = [];
-var num_stars = 72;
 
 function on_ready(){
   background.canvas = document.getElementById("canvas");
   background.context = background.canvas.getContext("2d");
 
   // Init starts position
-  for ( i = 0; i < num_stars; i++ ){
+  for ( i = 0; i < background.num_stars; i++ ){
     star_matrix[i] = [
       int_rand(background.canvas.width), // x
       int_rand(background.canvas.height), // y
@@ -20,7 +20,7 @@ function on_ready(){
     ];
   }
 
-  render_loop(); // 40 fps
+  render_loop();
 }
 
 function int_rand(max){
@@ -28,7 +28,7 @@ function int_rand(max){
 }
 
 function render_loop(){
-  for ( i = 0; i < num_stars; i++ ){
+  for ( i = 0; i < background.num_stars; i++ ){
     x = star_matrix[i][0];
     y = star_matrix[i][1];
     a = star_matrix[i][2];
