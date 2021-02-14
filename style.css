@@ -50,3 +50,21 @@ footer .right a {
 .right {
   float: right;
 }
+
+/*** Meme Page ***/
+div.memeheader {
+  float: right;
+  position: absolute;
+  right: 0;
+  top: 0px;
+  width: 15%;
+}
+
+#bn-photocenter-1-1-3611951122-wrapper {
+  position: absolute !important;
+  left: 0;
+  top: 0;
+  width: 85%;
+  overflow: scroll;
+  float: left;
+}
