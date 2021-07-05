@@ -1,0 +1,21 @@
+%h1 "Divine Memes"
+
+%div.some{:style =>  "width: 500px; display: flex; justify-content: space-around;"}
+  %a{ href: "/memes/#{@meme.id + 1}" }
+    %strong Next
+
+  %a{ href: "/memes/#{rand(1..@memes_size)}"}
+    %strong Random
+
+%h1 #{@meme.title}
+%img{src: url_for(@meme.meme), width: '1080', height: '720'}
+
+
+
+
+%a{ href: "/memes/like/#{@meme.id}" }
+  %strong
+    Like
+
+%h3 Likes: #{@meme.likes}
+

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :memes
 
   root 'home#index'
+  get  '/memes/like/:id', to: 'memes#like'
   get  '/c_admin/new', to: 'c_admin#index'
   post '/c_admin/upload', to: 'c_admin#upload'
 end
