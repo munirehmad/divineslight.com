@@ -13,13 +13,16 @@ threads min_threads_count, max_threads_count
 #
 worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
 
-# Specifies the `port` that Puma will listen on to receive requests; default is 3000.
-#
-port ENV.fetch("PORT") { 3000 }
+rails_env = ENV.fetch("RAILS_ENV") { "development" }
+environment rails_env
 
-# Specifies the `environment` that Puma will run in.
-#
-environment ENV.fetch("RAILS_ENV") { "development" }
+# Specifies the `port` that Puma will listen on to receive requests; default is 3000.
+if rails_env == 'production'
+  app_dir = File.expand_path("../..", __FILE__)
+  bind "unix://#{app_dir}/tmp/sockets/puma.sock"
+else
+  port ENV.fetch("PORT") { 3000 }
+end
 
 # Specifies the `pidfile` that Puma will use.
 pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }

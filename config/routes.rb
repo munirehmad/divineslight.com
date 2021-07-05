@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
   resources :memes
 
-  root to: 'home#index'
+  root 'home#index'
 end
