@@ -11,7 +11,7 @@
 %img{src: url_for(@meme.meme), :class => "meme"}
 
 
-%a{ href: "/memes/like/#{@meme.id}" }
+%a{ href: "#{@memes_path}/like/#{@meme.id}" }
   %strong
     Like
 
