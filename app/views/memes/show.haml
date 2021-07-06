@@ -1,16 +1,14 @@
 %h1 "Divine Memes"
 
-%div.some{:style =>  "width: 500px; display: flex; justify-content: space-around;"}
-  %a{ href: "/memes/#{@meme.id + 1}" }
+%div.some{:class => "next_rand_div"}
+  %a{ href: "#{@memes_path}/#{@meme.id + 1}" }
     %strong Next
 
-  %a{ href: "/memes/#{rand(1..@memes_size)}"}
+  %a{ href: "#{@memes_path}/#{rand(1..@memes_size)}"}
     %strong Random
 
 %h1 #{@meme.title}
-%img{src: url_for(@meme.meme), width: '1080', height: '720'}
-
-
+%img{src: url_for(@meme.meme), :class => "meme"}
 
 
 %a{ href: "/memes/like/#{@meme.id}" }
