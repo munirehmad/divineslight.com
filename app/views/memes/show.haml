@@ -1,0 +1,19 @@
+%h1 "Divine Memes"
+
+%div.some{:class => "next_rand_div"}
+  %a{ href: meme_path(@meme.id + 1) }
+    %strong Next
+
+  %a{ href: meme_path(rand(1..@memes_size))}
+    %strong Random
+
+%h1 #{@meme.title}
+%img{src: url_for(@meme.meme), :class => "meme"}
+
+
+%a{ href: memes_like_path_url(@meme.id) }
+  %strong
+    Like
+
+%h3 Likes: #{@meme.likes}
+
