@@ -1,6 +1,9 @@
 %h1 "Divine Memes"
 
 %div.some{:class => "next_rand_div"}
+  %a{ href: meme_path(@meme.id - 1) }
+    %strong Previous
+
   %a{ href: meme_path(@meme.id + 1) }
     %strong Next
 
@@ -16,4 +19,5 @@
     Like
 
 %h3 Likes: #{@meme.likes}
+
 

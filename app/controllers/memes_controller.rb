@@ -1,14 +1,15 @@
 class MemesController < ApplicationController
 
   def index
-    @memes = Meme.all
+    redirect_to meme_path(1)
   end
 
   def show
-    @memes_path = memes_path
     @memes_size = Meme.count
     if params[:id].to_i > @memes_size 
       @meme = Meme.last
+    elsif params[:id].to_i < 1
+      @meme = Meme.first
     else
       @meme = Meme.find params[:id]
     end
